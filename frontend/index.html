@@ -65,7 +65,7 @@
        You can override by setting window.API_BASE before this script runs. -->
   <script>
     if (typeof window.API_BASE === 'undefined') {
-      const backendPort = '5000';
+      const backendPort = '5000' || 'https://guestara-menu-backend.onrender.com/';
       // If the page is already served from the backend port, use a relative '/api' base.
       if (location.port === backendPort || location.host.endsWith(':' + backendPort)) {
         window.API_BASE = '/api';
